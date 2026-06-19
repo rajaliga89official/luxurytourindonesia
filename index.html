@@ -17,10 +17,11 @@ scroll-behavior:smooth;
 }
 
 body{
-background:#ffffff;
+background:#fff;
 color:#333;
 line-height:1.6;
 }
+
 nav{
 position:fixed;
 top:0;
@@ -36,11 +37,19 @@ box-shadow:0 2px 10px rgba(0,0,0,.08);
 z-index:999;
 }
 
-.logo img{
-height:40px;
-width:auto;
-max-width:150px;
+.logo{
+display:flex;
+align-items:center;
+gap:10px;
+font-size:24px;
+font-weight:700;
+color:#0F4C81;
 }
+
+.logo img{
+height:50px;
+width:auto;
+display:block;
 }
 
 nav ul{
@@ -63,10 +72,9 @@ align-items:center;
 text-align:center;
 padding:20px;
 padding-top:80px;
-}
 
 background:
-linear-gradient(rgba(255,255,255,.6),rgba(255,255,255,.7)),
+linear-gradient(rgba(255,255,255,.75),rgba(255,255,255,.75)),
 url('https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=2000&q=80');
 
 background-size:cover;
@@ -98,6 +106,11 @@ border-radius:50px;
 font-weight:600;
 }
 
+.btn-whatsapp{
+background:#25D366;
+margin-left:10px;
+}
+
 section{
 padding:90px 8%;
 }
@@ -105,8 +118,8 @@ padding:90px 8%;
 .title{
 text-align:center;
 margin-bottom:50px;
-color:#0F4C81;
 font-size:38px;
+color:#0F4C81;
 }
 
 .grid{
@@ -120,6 +133,12 @@ background:#fff;
 border-radius:20px;
 padding:25px;
 box-shadow:0 10px 30px rgba(0,0,0,.08);
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-8px);
+box-shadow:0 20px 40px rgba(0,0,0,.15);
 }
 
 .card h3{
@@ -128,7 +147,7 @@ margin-bottom:10px;
 }
 
 .price{
-font-size:26px;
+font-size:28px;
 font-weight:700;
 color:#F5B800;
 margin:15px 0;
@@ -136,13 +155,12 @@ margin:15px 0;
 
 .card ul{
 padding-left:20px;
-margin:15px 0;
 }
 
 details{
 margin-top:15px;
-background:#f8f9fb;
 padding:15px;
+background:#f7f8fb;
 border-radius:10px;
 }
 
@@ -154,11 +172,11 @@ color:#0F4C81;
 
 .btn-book{
 display:block;
-text-align:center;
 margin-top:20px;
 padding:14px;
 background:#25D366;
 color:#fff;
+text-align:center;
 text-decoration:none;
 border-radius:10px;
 font-weight:600;
@@ -171,14 +189,10 @@ background:#f8f9fb;
 .include-box{
 max-width:900px;
 margin:auto;
-background:white;
+background:#fff;
 padding:30px;
 border-radius:20px;
 box-shadow:0 5px 20px rgba(0,0,0,.08);
-}
-
-.include-box ul{
-padding-left:25px;
 }
 
 .testimonials{
@@ -198,21 +212,17 @@ border-radius:15px;
 box-shadow:0 5px 15px rgba(0,0,0,.08);
 }
 
-.faq details{
-margin-bottom:15px;
-}
-
 footer{
 background:#0F4C81;
-color:white;
+color:#fff;
 padding:30px;
 text-align:center;
 }
 
 .whatsapp{
 position:fixed;
-right:20px;
 bottom:20px;
+right:20px;
 background:#25D366;
 color:white;
 padding:15px 20px;
@@ -235,36 +245,51 @@ font-size:42px;
 font-size:18px;
 }
 
+.logo span{
+display:none;
+}
+
 }
 </style>
 </head>
+
 <body>
 
 <nav>
+
 <div class="logo">
-    <img src="logo.png" alt="Luxury Tour Indonesia">
+<img src="logo.png" alt="Luxury Tour Indonesia">
+<span>Luxury Tour Indonesia</span>
+</div>
 
 <ul>
-<li><a href="#paket">Paket Tour</a></li>
+<li><a href="#paket">Paket</a></li>
 <li><a href="#include">Include</a></li>
 <li><a href="#testimoni">Testimoni</a></li>
 <li><a href="#faq">FAQ</a></li>
 </ul>
+
 </nav>
 
 <header class="hero">
 
 <div class="hero-content">
-<h1>Tour Indonesia & Internasional</h1>
+
+<h1>Luxury Tour Indonesia</h1>
 
 <p>
-Paket Wisata Medan dan Jakarta ke Bali,
+Paket Wisata Medan & Jakarta ke Bali,
 Yogyakarta, Kuala Lumpur dan Bangkok
-dengan pelayanan terbaik.
+dengan harga terbaik.
 </p>
 
 <a href="#paket" class="btn">
-Lihat Paket Tour
+Lihat Paket
+</a>
+
+<a href="https://wa.me/6281234567890"
+class="btn btn-whatsapp">
+WhatsApp
 </a>
 
 </div>
@@ -277,12 +302,8 @@ Lihat Paket Tour
 
 <div class="grid">
 
-<!-- MEDAN BALI -->
-
 <div class="card">
-
 <h3>Medan → Bali</h3>
-
 <div class="price">Rp 3.499.000</div>
 
 <ul>
@@ -294,65 +315,15 @@ Lihat Paket Tour
 </ul>
 
 <details>
-<summary>Lihat Itinerary 4 Hari 3 Malam</summary>
-
-<p><b>Hari 1 - Medan → Bali</b></p>
-<ul>
-<li>Check-in Bandara Kualanamu</li>
-<li>Penerbangan Medan - Bali</li>
-<li>Penjemputan di Bandara Ngurah Rai</li>
-<li>Makan Siang</li>
-<li>Pantai Kuta</li>
-<li>Beachwalk Shopping Center</li>
-<li>Check-in Hotel</li>
-<li>Makan Malam</li>
-</ul>
-
-<p><b>Hari 2 - Bali Selatan Tour</b></p>
-<ul>
-<li>Sarapan Hotel</li>
-<li>Garuda Wisnu Kencana (GWK)</li>
-<li>Pantai Melasti</li>
-<li>Makan Siang</li>
-<li>Pura Uluwatu</li>
-<li>Pertunjukan Tari Kecak</li>
-<li>Seafood Dinner Jimbaran</li>
-<li>Kembali ke Hotel</li>
-</ul>
-
-<p><b>Hari 3 - Bali Utara Tour</b></p>
-<ul>
-<li>Sarapan Hotel</li>
-<li>Danau Beratan Bedugul</li>
-<li>Pura Ulun Danu</li>
-<li>Makan Siang</li>
-<li>Pasar Oleh-Oleh Krisna</li>
-<li>Tanah Lot</li>
-<li>Sunset Tanah Lot</li>
-<li>Makan Malam</li>
-<li>Kembali ke Hotel</li>
-</ul>
-
-<p><b>Hari 4 - Bali → Medan</b></p>
-<ul>
-<li>Sarapan Hotel</li>
-<li>Check Out Hotel</li>
-<li>Belanja Oleh-Oleh Bali</li>
-<li>Transfer Bandara Ngurah Rai</li>
-<li>Penerbangan Bali - Medan</li>
-<li>Tour Selesai</li>
-</ul>
-
+<summary>Lihat Itinerary</summary>
+<p>4 Hari 3 Malam Bali Tour</p>
 </details>
 
 <a class="btn-book"
-href="https://wa.me/6281234567890?text=Booking%20Tour%20Medan%20Bali">
+href="https://wa.me/6281234567890?text=Booking%20Medan%20Bali">
 Pesan Sekarang
 </a>
-
 </div>
-
-<!-- MEDAN JOGJA -->
 
 <div class="card">
 <h3>Medan → Yogyakarta</h3>
@@ -363,493 +334,81 @@ Pesan Sekarang
 <li>Hotel</li>
 <li>Makan</li>
 <li>Guide</li>
+<li>Tiket Wisata</li>
 </ul>
 
 <details>
-<summary>Lihat Itinerary 4 Hari 3 Malam</summary>
-
-<p><b>Hari 1 - Medan → Yogyakarta</b></p>
-<ul>
-<li>Check-in Bandara Kualanamu</li>
-<li>Penerbangan Medan - Yogyakarta</li>
-<li>Penjemputan di Bandara YIA</li>
-<li>Makan Siang</li>
-<li>Malioboro</li>
-<li>Tugu Yogyakarta</li>
-<li>Alun-Alun Kidul</li>
-<li>Check-in Hotel</li>
-<li>Makan Malam</li>
-</ul>
-
-<p><b>Hari 2 - Borobudur Tour</b></p>
-<ul>
-<li>Sarapan Hotel</li>
-<li>Candi Borobudur</li>
-<li>Pawon Temple</li>
-<li>Mendut Temple</li>
-<li>Makan Siang</li>
-<li>Svargabumi</li>
-<li>Pusat Oleh-Oleh Bakpia</li>
-<li>Kembali ke Hotel</li>
-</ul>
-
-<p><b>Hari 3 - Prambanan Tour</b></p>
-<ul>
-<li>Sarapan Hotel</li>
-<li>Candi Prambanan</li>
-<li>Tebing Breksi</li>
-<li>HeHa Sky View</li>
-<li>Makan Siang</li>
-<li>Obelix Hills</li>
-<li>Malioboro Night Tour</li>
-<li>Makan Malam</li>
-<li>Kembali ke Hotel</li>
-</ul>
-
-<p><b>Hari 4 - Yogyakarta → Medan</b></p>
-<ul>
-<li>Sarapan Hotel</li>
-<li>Check Out Hotel</li>
-<li>Belanja Oleh-Oleh Bakpia dan Gudeg</li>
-<li>Transfer Bandara YIA</li>
-<li>Penerbangan Yogyakarta - Medan</li>
-<li>Tour Selesai</li>
-</ul>
-
+<summary>Lihat Itinerary</summary>
+<p>4 Hari 3 Malam Yogyakarta Tour</p>
 </details>
 
 <a class="btn-book"
-href="https://wa.me/6281234567890?text=Booking%20Tour%20Medan%20Yogyakarta">
+href="https://wa.me/6281234567890">
 Pesan Sekarang
 </a>
 </div>
-
-<!-- MEDAN KL -->
 
 <div class="card">
 <h3>Medan → Kuala Lumpur</h3>
 <div class="price">Rp 3.999.000</div>
 
-<ul>
-<li>Tiket PP</li>
-<li>Hotel</li>
-<li>Guide</li>
-</ul>
-
-<details>
-<summary>Lihat Itinerary 4 Hari 3 Malam</summary>
-
-<p><b>Hari 1 - Medan → Kuala Lumpur</b></p>
-<ul>
-<li>Check-in Bandara Kualanamu</li>
-<li>Penerbangan ke Kuala Lumpur</li>
-<li>Putrajaya City Tour</li>
-<li>Masjid Putra</li>
-<li>Dataran Putrajaya</li>
-<li>Check-in Hotel</li>
-<li>Free Program</li>
-</ul>
-
-<p><b>Hari 2 - Kuala Lumpur City Tour</b></p>
-<ul>
-<li>Sarapan di Hotel</li>
-<li>Petronas Twin Tower</li>
-<li>Merdeka Square</li>
-<li>National Mosque</li>
-<li>King Palace</li>
-<li>Cocoa Boutique</li>
-<li>Bukit Bintang</li>
-<li>Makan Malam</li>
-</ul>
-
-<p><b>Hari 3 - Genting Highlands Tour</b></p>
-<ul>
-<li>Sarapan di Hotel</li>
-<li>Batu Caves</li>
-<li>Genting Highlands</li>
-<li>Cable Car Genting Skyway</li>
-<li>Sky Avenue Mall</li>
-<li>Shopping Tour</li>
-<li>Kembali ke Hotel</li>
-</ul>
-
-<p><b>Hari 4 - Kuala Lumpur → Medan</b></p>
-<ul>
-<li>Sarapan Hotel</li>
-<li>Check Out Hotel</li>
-<li>Belanja Oleh-Oleh</li>
-<li>Transfer ke Bandara</li>
-<li>Penerbangan Kuala Lumpur - Medan</li>
-<li>Tour Selesai</li>
-</ul>
-
-</details>
-</details>
-
 <a class="btn-book"
-href="https://wa.me/6281234567890?text=Booking%20Tour%20Medan%20Kuala%20Lumpur">
+href="https://wa.me/6281234567890">
 Pesan Sekarang
 </a>
 </div>
-
-<!-- MEDAN BANGKOK -->
 
 <div class="card">
 <h3>Medan → Bangkok</h3>
 <div class="price">Rp 6.499.000</div>
 
-<ul>
-<li>Tiket PP</li>
-<li>Hotel</li>
-<li>Guide</li>
-</ul>
-
-<details>
-<summary>Lihat Itinerary 4 Hari 3 Malam</summary>
-
-<p><b>Hari 1 - Medan → Bangkok</b></p>
-<ul>
-<li>Check-in Bandara Kualanamu</li>
-<li>Penerbangan ke Bangkok</li>
-<li>Check-in Hotel</li>
-<li>Asiatique The Riverfront</li>
-<li>Dinner</li>
-<li>Free Program</li>
-</ul>
-
-<p><b>Hari 2 - Bangkok City Tour</b></p>
-<ul>
-<li>Sarapan Hotel</li>
-<li>Grand Palace</li>
-<li>Wat Phra Kaew</li>
-<li>Wat Arun</li>
-<li>Chao Phraya River Cruise</li>
-<li>ICONSIAM Mall</li>
-<li>Dinner</li>
-</ul>
-
-<p><b>Hari 3 - Safari World & Shopping</b></p>
-<ul>
-<li>Sarapan Hotel</li>
-<li>Safari World</li>
-<li>Marine Park</li>
-<li>MBK Center</li>
-<li>Platinum Fashion Mall</li>
-<li>Pratunam Market</li>
-<li>Kembali ke Hotel</li>
-</ul>
-
-<p><b>Hari 4 - Bangkok → Medan</b></p>
-<ul>
-<li>Sarapan Hotel</li>
-<li>Check Out Hotel</li>
-<li>Belanja Oleh-Oleh</li>
-<li>Transfer ke Bandara</li>
-<li>Penerbangan Bangkok - Medan</li>
-<li>Tour Selesai</li>
-</ul>
-
-</details>
-
 <a class="btn-book"
-href="https://wa.me/6281234567890?text=Booking%20Tour%20Medan%20Bangkok">
+href="https://wa.me/6281234567890">
 Pesan Sekarang
 </a>
 </div>
 
-<!-- JAKARTA BALI -->
-
 <div class="card">
-
 <h3>Jakarta → Bali</h3>
-
 <div class="price">Rp 2.999.000</div>
 
-<ul>
-<li>Tiket Pesawat PP</li>
-<li>Hotel Bintang 4</li>
-<li>Makan 3x Sehari</li>
-<li>Tour Guide</li>
-<li>Tiket Wisata</li>
-</ul>
-
-<details>
-<summary>Lihat Itinerary 4 Hari 3 Malam</summary>
-
-<p><b>Hari 1 - Jakarta → Bali</b></p>
-<ul>
-<li>Check-in Bandara Soekarno Hatta</li>
-<li>Penerbangan Jakarta - Bali</li>
-<li>Penjemputan di Bandara Ngurah Rai</li>
-<li>Makan Siang</li>
-<li>Pantai Kuta</li>
-<li>Beachwalk Shopping Center</li>
-<li>Check-in Hotel</li>
-<li>Makan Malam</li>
-</ul>
-
-<p><b>Hari 2 - Bali Selatan Tour</b></p>
-<ul>
-<li>Sarapan Hotel</li>
-<li>Garuda Wisnu Kencana (GWK)</li>
-<li>Pantai Melasti</li>
-<li>Makan Siang</li>
-<li>Pura Uluwatu</li>
-<li>Pertunjukan Tari Kecak</li>
-<li>Seafood Dinner Jimbaran</li>
-<li>Kembali ke Hotel</li>
-</ul>
-
-<p><b>Hari 3 - Bali Utara Tour</b></p>
-<ul>
-<li>Sarapan Hotel</li>
-<li>Danau Beratan Bedugul</li>
-<li>Pura Ulun Danu</li>
-<li>Makan Siang</li>
-<li>Pasar Oleh-Oleh Krisna</li>
-<li>Tanah Lot</li>
-<li>Sunset Tanah Lot</li>
-<li>Makan Malam</li>
-<li>Kembali ke Hotel</li>
-</ul>
-
-<p><b>Hari 4 - Bali → Jakarta</b></p>
-<ul>
-<li>Sarapan Hotel</li>
-<li>Check Out Hotel</li>
-<li>Belanja Oleh-Oleh Bali</li>
-<li>Transfer Bandara Ngurah Rai</li>
-<li>Penerbangan Bali - Jakarta</li>
-<li>Tour Selesai</li>
-</ul>
-
-</details>
-
 <a class="btn-book"
-href="https://wa.me/6281234567890?text=Saya%20ingin%20booking%20Tour%20Jakarta%20Bali">
+href="https://wa.me/6281234567890">
 Pesan Sekarang
 </a>
-
 </div>
 
-<!-- JAKARTA JOGJA -->
-
 <div class="card">
-
 <h3>Jakarta → Yogyakarta</h3>
-
 <div class="price">Rp 2.499.000</div>
 
-<ul>
-<li>Tiket Pesawat PP</li>
-<li>Hotel</li>
-<li>Makan</li>
-<li>Tour Guide</li>
-<li>Tiket Wisata</li>
-</ul>
-
-<details>
-<summary>Lihat Itinerary 4 Hari 3 Malam</summary>
-
-<p><b>Hari 1 - Jakarta → Yogyakarta</b></p>
-<ul>
-<li>Check-in Bandara Soekarno Hatta</li>
-<li>Penerbangan Jakarta - Yogyakarta</li>
-<li>Penjemputan di Bandara YIA</li>
-<li>Makan Siang</li>
-<li>Malioboro</li>
-<li>Tugu Yogyakarta</li>
-<li>Alun-Alun Kidul</li>
-<li>Check-in Hotel</li>
-<li>Makan Malam</li>
-</ul>
-
-<p><b>Hari 2 - Borobudur Tour</b></p>
-<ul>
-<li>Sarapan Hotel</li>
-<li>Candi Borobudur</li>
-<li>Candi Mendut</li>
-<li>Makan Siang</li>
-<li>Svargabumi</li>
-<li>Pusat Oleh-Oleh Bakpia</li>
-<li>Kembali ke Hotel</li>
-</ul>
-
-<p><b>Hari 3 - Prambanan Tour</b></p>
-<ul>
-<li>Sarapan Hotel</li>
-<li>Candi Prambanan</li>
-<li>Tebing Breksi</li>
-<li>HeHa Sky View</li>
-<li>Makan Siang</li>
-<li>Obelix Hills</li>
-<li>Malioboro Night Tour</li>
-<li>Makan Malam</li>
-<li>Kembali ke Hotel</li>
-</ul>
-
-<p><b>Hari 4 - Yogyakarta → Jakarta</b></p>
-<ul>
-<li>Sarapan Hotel</li>
-<li>Check Out Hotel</li>
-<li>Belanja Oleh-Oleh Bakpia dan Gudeg</li>
-<li>Transfer Bandara YIA</li>
-<li>Penerbangan Yogyakarta - Jakarta</li>
-<li>Tour Selesai</li>
-</ul>
-
-</details>
-
 <a class="btn-book"
-href="https://wa.me/6281234567890?text=Saya%20ingin%20booking%20Tour%20Jakarta%20Yogyakarta">
+href="https://wa.me/6281234567890">
 Pesan Sekarang
 </a>
-
 </div>
 
-<!-- JAKARTA KL -->
-
 <div class="card">
-
-<h3>Jakarta → Kuala lumpur</h3>
-
+<h3>Jakarta → Kuala Lumpur</h3>
 <div class="price">Rp 4.999.000</div>
 
-<ul>
-<li>Tiket Pesawat PP</li>
-<li>Hotel</li>
-<li>Makan</li>
-<li>Tour Guide</li>
-<li>Tiket Wisata</li>
-</ul>
-
-<details>
-<summary>Lihat Itinerary 4 Hari 3 Malam</summary>
-
-<p><b>Hari 1 - Jakarta → Kuala Lumpur</b></p>
-<ul>
-<li>Check-in Bandara Soekarno Hatta</li>
-<li>Penerbangan ke Kuala Lumpur</li>
-<li>Putrajaya City Tour</li>
-<li>Masjid Putra</li>
-<li>Dataran Putrajaya</li>
-<li>Check-in Hotel</li>
-<li>Free Program</li>
-</ul>
-
-<p><b>Hari 2 - Kuala Lumpur City Tour</b></p>
-<ul>
-<li>Sarapan di Hotel</li>
-<li>Petronas Twin Tower</li>
-<li>Merdeka Square</li>
-<li>National Mosque</li>
-<li>King Palace</li>
-<li>Cocoa Boutique</li>
-<li>Bukit Bintang</li>
-<li>Makan Malam</li>
-</ul>
-
-<p><b>Hari 3 - Genting Highlands Tour</b></p>
-<ul>
-<li>Sarapan di Hotel</li>
-<li>Batu Caves</li>
-<li>Genting Highlands</li>
-<li>Cable Car Genting Skyway</li>
-<li>Sky Avenue Mall</li>
-<li>Shopping Tour</li>
-<li>Kembali ke Hotel</li>
-</ul>
-
-<p><b>Hari 4 - Kuala Lumpur → Jakarta</b></p>
-<ul>
-<li>Sarapan Hotel</li>
-<li>Check Out Hotel</li>
-<li>Belanja Oleh-Oleh</li>
-<li>Transfer ke Bandara</li>
-<li>Penerbangan Kuala Lumpur - Jakarta</li>
-<li>Tour Selesai</li>
-</ul>
-
-</details>
-
 <a class="btn-book"
-href="https://wa.me/6281234567890?text=Saya%20ingin%20booking%20Tour%20Jakarta%20Yogyakarta">
+href="https://wa.me/6281234567890">
 Pesan Sekarang
 </a>
-
 </div>
-
-<!-- JAKARTA BANGKOK -->
 
 <div class="card">
-
 <h3>Jakarta → Bangkok</h3>
-
 <div class="price">Rp 5.999.000</div>
 
-<ul>
-<li>Tiket Pesawat PP</li>
-<li>Hotel Bintang 4</li>
-<li>Sarapan</li>
-<li>Tour Guide</li>
-</ul>
-
-<details>
-<summary>Lihat Itinerary 4 Hari 3 Malam</summary>
-
-<p><b>Hari 1 - Jakarta → Bangkok</b></p>
-<ul>
-<li>Check-in Bandara Soekarno Hatta</li>
-<li>Penerbangan ke Bangkok</li>
-<li>Check-in Hotel</li>
-<li>Asiatique The Riverfront</li>
-<li>Dinner</li>
-<li>Free Program</li>
-</ul>
-
-<p><b>Hari 2 - Bangkok City Tour</b></p>
-<ul>
-<li>Sarapan Hotel</li>
-<li>Grand Palace</li>
-<li>Wat Phra Kaew</li>
-<li>Wat Arun</li>
-<li>Chao Phraya River Cruise</li>
-<li>ICONSIAM Mall</li>
-<li>Dinner</li>
-</ul>
-
-<p><b>Hari 3 - Safari World & Shopping</b></p>
-<ul>
-<li>Sarapan Hotel</li>
-<li>Safari World</li>
-<li>Marine Park</li>
-<li>MBK Center</li>
-<li>Platinum Fashion Mall</li>
-<li>Pratunam Market</li>
-<li>Kembali ke Hotel</li>
-</ul>
-
-<p><b>Hari 4 - Bangkok → Jakarta</b></p>
-<ul>
-<li>Sarapan Hotel</li>
-<li>Check Out Hotel</li>
-<li>Belanja Oleh-Oleh</li>
-<li>Transfer ke Bandara</li>
-<li>Penerbangan Bangkok - Jakarta</li>
-<li>Tour Selesai</li>
-</ul>
-
-</details>
-
 <a class="btn-book"
-href="https://wa.me/6281234567890?text=Saya%20ingin%20booking%20Tour%20Jakarta%20Bangkok">
+href="https://wa.me/6281234567890">
 Pesan Sekarang
 </a>
-
 </div>
 
 </div>
-
 </section>
 
 <section id="include" class="include">
@@ -859,43 +418,15 @@ Pesan Sekarang
 <div class="include-box">
 
 <ul>
-<li>✓ Tiket Pesawat Pulang Pergi</li>
-<li>✓ Hotel Bintang 3–5</li>
+<li>✓ Tiket Pesawat PP</li>
+<li>✓ Hotel Bintang 3-5</li>
 <li>✓ Sarapan Hotel</li>
-<li>✓ Makan Siang dan Makan Malam</li>
+<li>✓ Makan Siang & Malam</li>
 <li>✓ Tour Guide Profesional</li>
 <li>✓ Transport Pariwisata</li>
-<li>✓ Tiket Masuk Tempat Wisata</li>
-<li>✓ Air Mineral Selama Tour</li>
+<li>✓ Tiket Masuk Wisata</li>
+<li>✓ Air Mineral</li>
 </ul>
-
-</div>
-
-<section class="why-us">
-
-<h2 class="title">Mengapa Memilih Kami?</h2>
-
-<div class="grid">
-
-<div class="card">
-<h3>✈ Tiket Pesawat Included</h3>
-<p>Tiket PP sudah termasuk dalam paket.</p>
-</div>
-
-<div class="card">
-<h3>🏨 Hotel Berkualitas</h3>
-<p>Hotel pilihan lokasi strategis.</p>
-</div>
-
-<div class="card">
-<h3>🧑‍💼 Tour Guide Profesional</h3>
-<p>Berpengalaman dan ramah.</p>
-</div>
-
-<div class="card">
-<h3>💰 Harga Transparan</h3>
-<p>Tidak ada biaya tersembunyi.</p>
-</div>
 
 </div>
 
@@ -903,33 +434,25 @@ Pesan Sekarang
 
 <section id="testimoni" class="testimonials">
 
-<h2 class="title">Testimoni Pelanggan</h2>
+<h2 class="title">Testimoni</h2>
 
 <div class="testimonial-grid">
 
 <div class="testimonial">
 ★★★★★
-<p>
-Tour Bali sangat menyenangkan,
-hotel bersih dan guide ramah.
-</p>
+<p>Pelayanan sangat memuaskan dan hotel bagus.</p>
 <strong>Andi - Medan</strong>
 </div>
 
 <div class="testimonial">
 ★★★★★
-<p>
-Bangkok trip berjalan lancar dan
-sesuai itinerary.
-</p>
+<p>Tour Bangkok berjalan lancar sesuai itinerary.</p>
 <strong>Rina - Jakarta</strong>
 </div>
 
 <div class="testimonial">
 ★★★★★
-<p>
-Pelayanan cepat dan harga terbaik.
-</p>
+<p>Harga terbaik dan admin responsif.</p>
 <strong>Budi - Medan</strong>
 </div>
 
@@ -937,37 +460,9 @@ Pelayanan cepat dan harga terbaik.
 
 </section>
 
-<section id="faq" class="faq">
-
-<h2 class="title">FAQ</h2>
-
-<details>
-<summary>Apakah tiket pesawat sudah termasuk?</summary>
-<p>Ya, seluruh paket sudah termasuk tiket pesawat PP.</p>
-</details>
-
-<details>
-<summary>Apakah hotel sudah termasuk?</summary>
-<p>Ya, hotel sudah termasuk sesuai paket.</p>
-</details>
-
-<details>
-<summary>Apakah tersedia private tour?</summary>
-<p>Ya, tersedia private maupun group tour.</p>
-</details>
-
-</section>
-
 <footer>
-
-<p>
-© 2026 Luxury Tour Indonesia
-</p>
-
-<p>
-WhatsApp: 0812-3456-7890
-</p>
-
+<p>© 2026 Luxury Tour Indonesia</p>
+<p>WhatsApp : 0812-3456-7890</p>
 </footer>
 
 <a class="whatsapp"
