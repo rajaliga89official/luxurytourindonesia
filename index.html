@@ -1,133 +1,394 @@
-<section id="packages" class="packages">
-    <div class="container">
-        <div class="section-title">
-            <h2>Paket Tour Populer</h2>
-            <p>Pilih destinasi favorit Anda dengan harga terbaik</p>
-        </div>
+```html
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <div class="package-grid">
+<title>Luxury Tour Indonesia</title>
 
-            <div class="card">
-                <h3>Medan → Bali</h3>
-                <p>4 Hari 3 Malam</p>
-                <span>Mulai Rp 3.499.000</span>
-                <a href="https://wa.me/628xxxxxxxxxx">Pesan Sekarang</a>
-            </div>
-
-            <div class="card">
-                <h3>Medan → Jogja</h3>
-                <p>3 Hari 2 Malam</p>
-                <span>Mulai Rp 2.999.000</span>
-                <a href="https://wa.me/628xxxxxxxxxx">Pesan Sekarang</a>
-            </div>
-
-            <div class="card">
-                <h3>Medan → Kuala Lumpur</h3>
-                <p>3 Hari 2 Malam</p>
-                <span>Mulai Rp 4.999.000</span>
-                <a href="https://wa.me/628xxxxxxxxxx">Pesan Sekarang</a>
-            </div>
-
-            <div class="card">
-                <h3>Medan → Bangkok</h3>
-                <p>4 Hari 3 Malam</p>
-                <span>Mulai Rp 6.499.000</span>
-                <a href="https://wa.me/628xxxxxxxxxx">Pesan Sekarang</a>
-            </div>
-
-            <div class="card">
-                <h3>Jakarta → Bali</h3>
-                <p>4 Hari 3 Malam</p>
-                <span>Mulai Rp 2.999.000</span>
-                <a href="https://wa.me/628xxxxxxxxxx">Pesan Sekarang</a>
-            </div>
-
-            <div class="card">
-                <h3>Jakarta → Jogja</h3>
-                <p>3 Hari 2 Malam</p>
-                <span>Mulai Rp 2.499.000</span>
-                <a href="https://wa.me/628xxxxxxxxxx">Pesan Sekarang</a>
-            </div>
-
-            <div class="card">
-                <h3>Jakarta → Kuala Lumpur</h3>
-                <p>3 Hari 2 Malam</p>
-                <span>Mulai Rp 4.499.000</span>
-                <a href="https://wa.me/628xxxxxxxxxx">Pesan Sekarang</a>
-            </div>
-
-            <div class="card">
-                <h3>Jakarta → Bangkok</h3>
-                <p>4 Hari 3 Malam</p>
-                <span>Mulai Rp 5.999.000</span>
-                <a href="https://wa.me/628xxxxxxxxxx">Pesan Sekarang</a>
-            </div>
-
-        </div>
-    </div>
-</section>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
-.packages{
-    padding:80px 5%;
-    background:#f7f7f7;
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:#0a0a0a;
+color:#fff;
+overflow-x:hidden;
+}
+
+/* NAVBAR */
+
+nav{
+position:fixed;
+top:0;
+width:100%;
+padding:20px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+z-index:1000;
+background:rgba(0,0,0,.35);
+backdrop-filter:blur(10px);
+}
+
+.logo{
+font-size:28px;
+font-weight:700;
+color:#d4af37;
+}
+
+nav ul{
+display:flex;
+gap:30px;
+list-style:none;
+}
+
+nav ul li a{
+color:white;
+text-decoration:none;
+font-weight:500;
+transition:.3s;
+}
+
+nav ul li a:hover{
+color:#d4af37;
+}
+
+/* HERO */
+
+.hero{
+height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+padding:0 20px;
+
+background:
+linear-gradient(
+rgba(0,0,0,.65),
+rgba(0,0,0,.75)
+),
+url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=2000&q=80');
+
+background-size:cover;
+background-position:center;
+}
+
+.hero-content{
+max-width:950px;
+}
+
+.hero-content h1{
+font-size:70px;
+line-height:1.1;
+margin-bottom:20px;
+font-weight:700;
+}
+
+.hero-content h1 span{
+color:#d4af37;
+}
+
+.hero-content p{
+font-size:22px;
+color:#ddd;
+margin-bottom:40px;
+}
+
+.hero-btn{
+display:inline-block;
+padding:18px 40px;
+background:#d4af37;
+color:#000;
+font-weight:700;
+text-decoration:none;
+border-radius:50px;
+transition:.3s;
+}
+
+.hero-btn:hover{
+transform:translateY(-5px);
+box-shadow:0 10px 30px rgba(212,175,55,.5);
+}
+
+/* DESTINATIONS */
+
+.destinations{
+padding:100px 8%;
+background:#111;
 }
 
 .section-title{
-    text-align:center;
-    margin-bottom:50px;
+text-align:center;
+margin-bottom:60px;
 }
 
 .section-title h2{
-    font-size:40px;
-    margin-bottom:10px;
+font-size:42px;
+color:#d4af37;
+margin-bottom:10px;
 }
 
-.package-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-    gap:25px;
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px;
 }
 
 .card{
-    background:#fff;
-    border-radius:18px;
-    padding:30px;
-    text-align:center;
-    box-shadow:0 10px 25px rgba(0,0,0,.1);
-    transition:.3s;
+background:rgba(255,255,255,.05);
+backdrop-filter:blur(10px);
+border:1px solid rgba(255,255,255,.08);
+border-radius:20px;
+overflow:hidden;
+transition:.3s;
 }
 
 .card:hover{
-    transform:translateY(-8px);
+transform:translateY(-10px);
 }
 
-.card h3{
-    font-size:24px;
-    margin-bottom:15px;
+.card img{
+width:100%;
+height:220px;
+object-fit:cover;
 }
 
-.card p{
-    color:#666;
+.card-content{
+padding:25px;
 }
 
-.card span{
-    display:block;
-    margin:15px 0;
-    font-size:22px;
-    font-weight:bold;
-    color:#ff7b00;
+.card-content h3{
+margin-bottom:10px;
+color:#d4af37;
 }
 
-.card a{
-    display:inline-block;
-    background:#25D366;
-    color:white;
-    text-decoration:none;
-    padding:12px 25px;
-    border-radius:50px;
-    font-weight:600;
+.price{
+font-size:28px;
+font-weight:700;
+margin:15px 0;
 }
+
+.book-btn{
+display:inline-block;
+padding:12px 25px;
+background:#d4af37;
+color:black;
+text-decoration:none;
+border-radius:40px;
+font-weight:600;
+}
+
+/* CTA */
+
+.cta{
+padding:120px 8%;
+text-align:center;
+background:
+linear-gradient(
+rgba(0,0,0,.7),
+rgba(0,0,0,.7)
+),
+url('https://images.unsplash.com/photo-1519046904884-53103b34b206?auto=format&fit=crop&w=2000&q=80');
+
+background-size:cover;
+background-position:center;
+}
+
+.cta h2{
+font-size:50px;
+margin-bottom:20px;
+}
+
+.cta p{
+font-size:20px;
+margin-bottom:30px;
+}
+
+/* FOOTER */
+
+footer{
+padding:30px;
+background:#000;
+text-align:center;
+color:#999;
+}
+
+.whatsapp{
+position:fixed;
+right:25px;
+bottom:25px;
+background:#25D366;
+padding:15px 25px;
+border-radius:50px;
+color:white;
+text-decoration:none;
+font-weight:600;
+}
+
+@media(max-width:768px){
+
+.hero-content h1{
+font-size:42px;
+}
+
+.hero-content p{
+font-size:18px;
+}
+
+nav ul{
+display:none;
+}
+
+}
+
 </style>
-```
+</head>
 
+<body>
+
+<nav>
+<div class="logo">Luxury Tour Indonesia</div>
+
+<ul>
+<li><a href="#">Home</a></li>
+<li><a href="#">Paket Tour</a></li>
+<li><a href="#">Galeri</a></li>
+<li><a href="#">Kontak</a></li>
+</ul>
+</nav>
+
+<section class="hero">
+
+<div class="hero-content">
+
+<h1>
+Luxury Tour
+<span>Indonesia</span>
+</h1>
+
+<p>
+Nikmati pengalaman wisata premium ke Bali, Jogja,
+Kuala Lumpur, dan Bangkok dengan layanan eksklusif,
+hotel terbaik, serta harga spesial.
+</p>
+
+<a href="#tour" class="hero-btn">
+Lihat Paket Tour
+</a>
+
+</div>
+
+</section>
+
+<section class="destinations" id="tour">
+
+<div class="section-title">
+<h2>Paket Tour Premium</h2>
+<p>Pilihan destinasi favorit wisatawan Indonesia</p>
+</div>
+
+<div class="cards">
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1537953773345-d172ccf13cf1">
+<div class="card-content">
+<h3>Medan → Bali</h3>
+<div class="price">Rp 3.499.000</div>
+<a href="#" class="book-btn">Pesan</a>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1555400038-63f5ba517a47">
+<div class="card-content">
+<h3>Medan → Jogja</h3>
+<div class="price">Rp 2.999.000</div>
+<a href="#" class="book-btn">Pesan</a>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1596422846543-75c6fc197f07">
+<div class="card-content">
+<h3>Medan → Kuala Lumpur</h3>
+<div class="price">Rp 4.999.000</div>
+<a href="#" class="book-btn">Pesan</a>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1563492065599-3520f775eeed">
+<div class="card-content">
+<h3>Medan → Bangkok</h3>
+<div class="price">Rp 6.499.000</div>
+<a href="#" class="book-btn">Pesan</a>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1537953773345-d172ccf13cf1">
+<div class="card-content">
+<h3>Jakarta → Bali</h3>
+<div class="price">Rp 2.999.000</div>
+<a href="#" class="book-btn">Pesan</a>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1555400038-63f5ba517a47">
+<div class="card-content">
+<h3>Jakarta → Jogja</h3>
+<div class="price">Rp 2.499.000</div>
+<a href="#" class="book-btn">Pesan</a>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1596422846543-75c6fc197f07">
+<div class="card-content">
+<h3>Jakarta → Kuala Lumpur</h3>
+<div class="price">Rp 4.499.000</div>
+<a href="#" class="book-btn">Pesan</a>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1563492065599-3520f775eeed">
+<div class="card-content">
+<h3>Jakarta → Bangkok</h3>
+<div class="price">Rp 5.999.000</div>
+<a href="#" class="book-btn">Pesan</a>
+</div>
+</div>
+
+</div>
+
+</section>
+
+<section class="cta">
+<h2>Liburan Mewah Dimulai Dari Sini</h2>
+<p>Dapatkan promo spesial dan konsultasi gratis sekarang.</p>
+<a href="#" class="hero-btn">Hubungi Kami</a>
+</section>
+
+<footer>
+© 2026 Luxury Tour Indonesia. All Rights Reserved.
+</footer>
+
+<a href="https://wa.me/6281234567890" class="whatsapp">
+WhatsApp
+</a>
+
+</body>
+</html>
+```
