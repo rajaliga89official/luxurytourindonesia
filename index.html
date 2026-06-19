@@ -13,25 +13,65 @@ margin:0;
 padding:0;
 box-sizing:border-box;
 font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
 }
 
 body{
-background:#fff;
+background:#ffffff;
 color:#333;
 line-height:1.6;
 }
 
-header{
-background:linear-gradient(rgba(255,255,255,.7),rgba(255,255,255,.7)),
-url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=2000&q=80');
-background-size:cover;
-background-position:center;
+nav{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+background:#fff;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 8%;
+box-shadow:0 2px 10px rgba(0,0,0,.08);
+z-index:999;
+}
+
+.logo{
+font-size:28px;
+font-weight:700;
+color:#0F4C81;
+}
+
+nav ul{
+display:flex;
+list-style:none;
+gap:25px;
+}
+
+nav a{
+text-decoration:none;
+color:#333;
+font-weight:600;
+}
+
+.hero{
 height:100vh;
 display:flex;
-align-items:center;
 justify-content:center;
+align-items:center;
 text-align:center;
 padding:20px;
+
+background:
+linear-gradient(rgba(255,255,255,.6),rgba(255,255,255,.7)),
+url('https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=2000&q=80');
+
+background-size:cover;
+background-position:center;
+}
+
+.hero-content{
+max-width:900px;
 }
 
 .hero h1{
@@ -49,29 +89,31 @@ margin-bottom:30px;
 display:inline-block;
 padding:15px 35px;
 background:#0F4C81;
-color:white;
+color:#fff;
 text-decoration:none;
 border-radius:50px;
+font-weight:600;
 }
 
 section{
-padding:80px 8%;
+padding:90px 8%;
 }
 
 .title{
 text-align:center;
 margin-bottom:50px;
 color:#0F4C81;
+font-size:38px;
 }
 
 .grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
 gap:25px;
 }
 
 .card{
-background:white;
+background:#fff;
 border-radius:20px;
 padding:25px;
 box-shadow:0 10px 30px rgba(0,0,0,.08);
@@ -83,68 +125,146 @@ margin-bottom:10px;
 }
 
 .price{
-font-size:24px;
+font-size:26px;
 font-weight:700;
-color:#f5b800;
-margin:10px 0;
+color:#F5B800;
+margin:15px 0;
+}
+
+.card ul{
+padding-left:20px;
+margin:15px 0;
+}
+
+details{
+margin-top:15px;
+background:#f8f9fb;
+padding:15px;
+border-radius:10px;
+}
+
+summary{
+cursor:pointer;
+font-weight:600;
+color:#0F4C81;
+}
+
+.btn-book{
+display:block;
+text-align:center;
+margin-top:20px;
+padding:14px;
+background:#25D366;
+color:#fff;
+text-decoration:none;
+border-radius:10px;
+font-weight:600;
 }
 
 .include{
 background:#f8f9fb;
 }
 
-.include ul{
-max-width:800px;
+.include-box{
+max-width:900px;
 margin:auto;
+background:white;
+padding:30px;
+border-radius:20px;
+box-shadow:0 5px 20px rgba(0,0,0,.08);
 }
 
-.include li{
-margin-bottom:10px;
-}
-
-.itinerary{
-background:#fff;
-}
-
-.day{
-background:#f8f9fb;
-padding:20px;
-border-radius:15px;
-margin-bottom:20px;
+.include-box ul{
+padding-left:25px;
 }
 
 .testimonials{
 background:#f8f9fb;
 }
 
+.testimonial-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:25px;
+}
+
 .testimonial{
-background:white;
+background:#fff;
 padding:25px;
 border-radius:15px;
 box-shadow:0 5px 15px rgba(0,0,0,.08);
 }
 
+.faq details{
+margin-bottom:15px;
+}
+
 footer{
 background:#0F4C81;
 color:white;
-text-align:center;
 padding:30px;
+text-align:center;
+}
+
+.whatsapp{
+position:fixed;
+right:20px;
+bottom:20px;
+background:#25D366;
+color:white;
+padding:15px 20px;
+border-radius:50px;
+text-decoration:none;
+font-weight:600;
+}
+
+@media(max-width:768px){
+
+nav ul{
+display:none;
+}
+
+.hero h1{
+font-size:42px;
+}
+
+.hero p{
+font-size:18px;
+}
+
 }
 </style>
 </head>
-
 <body>
 
-<header>
-<div class="hero">
-<h1>Luxury Tour Indonesia</h1>
+<nav>
+<div class="logo">Luxury Tour Indonesia</div>
+
+<ul>
+<li><a href="#paket">Paket Tour</a></li>
+<li><a href="#include">Include</a></li>
+<li><a href="#testimoni">Testimoni</a></li>
+<li><a href="#faq">FAQ</a></li>
+</ul>
+</nav>
+
+<header class="hero">
+
+<div class="hero-content">
+<h1>Tour Indonesia & Internasional</h1>
+
 <p>
-Paket Wisata Medan & Jakarta ke Bali, Yogyakarta,
-Kuala Lumpur dan Bangkok
+Paket Wisata Medan dan Jakarta ke Bali,
+Yogyakarta, Kuala Lumpur dan Bangkok
+dengan pelayanan terbaik.
 </p>
 
-<a href="#paket" class="btn">Lihat Paket Tour</a>
+<a href="#paket" class="btn">
+Lihat Paket Tour
+</a>
+
 </div>
+
 </header>
 
 <section id="paket">
@@ -153,157 +273,261 @@ Kuala Lumpur dan Bangkok
 
 <div class="grid">
 
+<!-- MEDAN BALI -->
+
 <div class="card">
+
 <h3>Medan → Bali</h3>
-<p>4 Hari 3 Malam</p>
+
 <div class="price">Rp 3.499.000</div>
-<p>Tiket PP • Hotel • Makan • Guide</p>
+
+<ul>
+<li>Tiket Pesawat PP</li>
+<li>Hotel Bintang 4</li>
+<li>Makan 3x Sehari</li>
+<li>Tour Guide</li>
+<li>Tiket Wisata</li>
+</ul>
+
+<details>
+<summary>Lihat Itinerary</summary>
+
+<p><b>Hari 1:</b> Medan - Bali, Pantai Kuta, Dinner</p>
+<p><b>Hari 2:</b> GWK, Melasti, Uluwatu</p>
+<p><b>Hari 3:</b> Bedugul, Danau Beratan, Tanah Lot</p>
+<p><b>Hari 4:</b> Oleh-Oleh, Transfer Bandara</p>
+
+</details>
+
+<a class="btn-book"
+href="https://wa.me/6281234567890?text=Booking%20Tour%20Medan%20Bali">
+Pesan Sekarang
+</a>
+
 </div>
+
+<!-- MEDAN JOGJA -->
 
 <div class="card">
 <h3>Medan → Yogyakarta</h3>
-<p>3 Hari 2 Malam</p>
 <div class="price">Rp 2.999.000</div>
-<p>Tiket PP • Hotel • Makan • Guide</p>
+
+<ul>
+<li>Tiket Pesawat PP</li>
+<li>Hotel</li>
+<li>Makan</li>
+<li>Guide</li>
+</ul>
+
+<details>
+<summary>Lihat Itinerary</summary>
+<p>Hari 1: Malioboro, Tugu Jogja</p>
+<p>Hari 2: Borobudur, Prambanan</p>
+<p>Hari 3: Oleh-Oleh & Airport</p>
+</details>
+
+<a class="btn-book"
+href="https://wa.me/6281234567890?text=Booking%20Tour%20Medan%20Yogyakarta">
+Pesan Sekarang
+</a>
 </div>
+
+<!-- MEDAN KL -->
 
 <div class="card">
 <h3>Medan → Kuala Lumpur</h3>
-<p>3 Hari 2 Malam</p>
 <div class="price">Rp 4.999.000</div>
-<p>Tiket PP • Hotel • Guide</p>
+
+<ul>
+<li>Tiket PP</li>
+<li>Hotel</li>
+<li>Guide</li>
+</ul>
+
+<details>
+<summary>Lihat Itinerary</summary>
+<p>Petronas Tower</p>
+<p>Genting Highlands</p>
+<p>Batu Caves</p>
+</details>
+
+<a class="btn-book"
+href="https://wa.me/6281234567890?text=Booking%20Tour%20Medan%20Kuala%20Lumpur">
+Pesan Sekarang
+</a>
 </div>
+
+<!-- MEDAN BANGKOK -->
 
 <div class="card">
 <h3>Medan → Bangkok</h3>
-<p>4 Hari 3 Malam</p>
 <div class="price">Rp 6.499.000</div>
-<p>Tiket PP • Hotel • Guide</p>
+
+<ul>
+<li>Tiket PP</li>
+<li>Hotel</li>
+<li>Guide</li>
+</ul>
+
+<details>
+<summary>Lihat Itinerary</summary>
+<p>Grand Palace</p>
+<p>Wat Arun</p>
+<p>Safari World</p>
+</details>
+
+<a class="btn-book"
+href="https://wa.me/6281234567890?text=Booking%20Tour%20Medan%20Bangkok">
+Pesan Sekarang
+</a>
 </div>
+
+<!-- JAKARTA BALI -->
 
 <div class="card">
 <h3>Jakarta → Bali</h3>
-<p>4 Hari 3 Malam</p>
 <div class="price">Rp 2.999.000</div>
+<p>4 Hari 3 Malam</p>
+<a class="btn-book"
+href="https://wa.me/6281234567890?text=Booking%20Tour%20Jakarta%20Bali">
+Pesan Sekarang
+</a>
 </div>
+
+<!-- JAKARTA JOGJA -->
 
 <div class="card">
 <h3>Jakarta → Yogyakarta</h3>
-<p>3 Hari 2 Malam</p>
 <div class="price">Rp 2.499.000</div>
+<p>3 Hari 2 Malam</p>
+<a class="btn-book"
+href="https://wa.me/6281234567890?text=Booking%20Tour%20Jakarta%20Yogyakarta">
+Pesan Sekarang
+</a>
 </div>
+
+<!-- JAKARTA KL -->
 
 <div class="card">
 <h3>Jakarta → Kuala Lumpur</h3>
-<p>3 Hari 2 Malam</p>
 <div class="price">Rp 4.499.000</div>
+<p>3 Hari 2 Malam</p>
+<a class="btn-book"
+href="https://wa.me/6281234567890?text=Booking%20Tour%20Jakarta%20Kuala%20Lumpur">
+Pesan Sekarang
+</a>
 </div>
+
+<!-- JAKARTA BANGKOK -->
 
 <div class="card">
 <h3>Jakarta → Bangkok</h3>
-<p>4 Hari 3 Malam</p>
 <div class="price">Rp 5.999.000</div>
+<p>4 Hari 3 Malam</p>
+<a class="btn-book"
+href="https://wa.me/6281234567890?text=Booking%20Tour%20Jakarta%20Bangkok">
+Pesan Sekarang
+</a>
 </div>
 
 </div>
 
 </section>
 
-<section class="include">
+<section id="include" class="include">
 
 <h2 class="title">Include Tour</h2>
+
+<div class="include-box">
 
 <ul>
 <li>✓ Tiket Pesawat Pulang Pergi</li>
 <li>✓ Hotel Bintang 3–5</li>
 <li>✓ Sarapan Hotel</li>
-<li>✓ Makan Siang dan Malam</li>
+<li>✓ Makan Siang dan Makan Malam</li>
 <li>✓ Tour Guide Profesional</li>
-<li>✓ Transportasi Pariwisata</li>
+<li>✓ Transport Pariwisata</li>
 <li>✓ Tiket Masuk Tempat Wisata</li>
 <li>✓ Air Mineral Selama Tour</li>
 </ul>
 
-</section>
-
-<section class="itinerary">
-
-<h2 class="title">Contoh Itinerary Bali 4H3M</h2>
-
-<div class="day">
-<h3>Hari 1</h3>
-<p>
-Keberangkatan – Check In Hotel – Pantai Kuta –
-Sunset Dinner
-</p>
-</div>
-
-<div class="day">
-<h3>Hari 2</h3>
-<p>
-GWK Cultural Park – Pantai Melasti –
-Uluwatu Temple – Tari Kecak
-</p>
-</div>
-
-<div class="day">
-<h3>Hari 3</h3>
-<p>
-Bedugul – Danau Beratan –
-Tanah Lot – Oleh Oleh Bali
-</p>
-</div>
-
-<div class="day">
-<h3>Hari 4</h3>
-<p>
-Check Out – Transfer Bandara –
-Penerbangan Kembali
-</p>
 </div>
 
 </section>
 
-<section class="testimonials">
+<section id="testimoni" class="testimonials">
 
 <h2 class="title">Testimoni Pelanggan</h2>
 
-<div class="grid">
+<div class="testimonial-grid">
 
 <div class="testimonial">
 ★★★★★
 <p>
-Tour Medan Bali sangat memuaskan.
-Hotel bagus dan guide sangat ramah.
+Tour Bali sangat menyenangkan,
+hotel bersih dan guide ramah.
 </p>
-<strong>Andi Wijaya</strong>
-</div>
-
-<div class="testimonial">
-★★★★★
-<p>
-Perjalanan Bangkok berjalan lancar
-dan sesuai itinerary.
-</p>
-<strong>Rina Sari</strong>
+<strong>Andi - Medan</strong>
 </div>
 
 <div class="testimonial">
 ★★★★★
 <p>
-Harga terbaik dan pelayanan cepat.
-Sangat direkomendasikan.
+Bangkok trip berjalan lancar dan
+sesuai itinerary.
 </p>
-<strong>Budi Santoso</strong>
+<strong>Rina - Jakarta</strong>
+</div>
+
+<div class="testimonial">
+★★★★★
+<p>
+Pelayanan cepat dan harga terbaik.
+</p>
+<strong>Budi - Medan</strong>
 </div>
 
 </div>
+
+</section>
+
+<section id="faq" class="faq">
+
+<h2 class="title">FAQ</h2>
+
+<details>
+<summary>Apakah tiket pesawat sudah termasuk?</summary>
+<p>Ya, seluruh paket sudah termasuk tiket pesawat PP.</p>
+</details>
+
+<details>
+<summary>Apakah hotel sudah termasuk?</summary>
+<p>Ya, hotel sudah termasuk sesuai paket.</p>
+</details>
+
+<details>
+<summary>Apakah tersedia private tour?</summary>
+<p>Ya, tersedia private maupun group tour.</p>
+</details>
 
 </section>
 
 <footer>
-© 2026 Luxury Tour Indonesia | WhatsApp: 0812-3456-7890
+
+<p>
+© 2026 Luxury Tour Indonesia
+</p>
+
+<p>
+WhatsApp: 0812-3456-7890
+</p>
+
 </footer>
+
+<a class="whatsapp"
+href="https://wa.me/6281234567890">
+WhatsApp
+</a>
 
 </body>
 </html>
