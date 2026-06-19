@@ -1,15 +1,311 @@
-<!DOCTYPE html><html lang='id'><head><meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1'><title>Luxury Tour Indonesia</title><link rel='stylesheet' href='css/style.css'></head><body>
-<nav><div class='logo'>Luxury Tour Indonesia</div></nav>
-<header class='hero'><div><h1>Paket Tour Indonesia & Internasional</h1><p>Medan & Jakarta ke Bali, Yogyakarta, Kuala Lumpur, Bangkok</p><a class='btn' href='#paket'>Lihat Paket</a></div></header>
-<section id='paket'><h2>Paket Tour</h2><div class='grid'>
-<div class='card'><h3>Medan → Bali</h3><p>4H3M • Tiket PP • Hotel • Makan • Guide</p></div>
-<div class='card'><h3>Medan → Yogyakarta</h3><p>3H2M • Tiket PP • Hotel • Makan • Guide</p></div>
-<div class='card'><h3>Medan → Kuala Lumpur</h3><p>3H2M • Tiket PP • Hotel • Guide</p></div>
-<div class='card'><h3>Medan → Bangkok</h3><p>4H3M • Tiket PP • Hotel • Guide</p></div>
-<div class='card'><h3>Jakarta → Bali</h3></div>
-<div class='card'><h3>Jakarta → Yogyakarta</h3></div>
-<div class='card'><h3>Jakarta → Kuala Lumpur</h3></div>
-<div class='card'><h3>Jakarta → Bangkok</h3></div>
-</div></section>
-<section><h2>Testimoni</h2><div id='t'>★★★★★ Pelayanan sangat memuaskan.</div></section>
-<script src='js/script.js'></script></body></html>
+```html
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Luxury Tour Indonesia</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:#fff;
+color:#333;
+line-height:1.6;
+}
+
+header{
+background:linear-gradient(rgba(255,255,255,.7),rgba(255,255,255,.7)),
+url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=2000&q=80');
+background-size:cover;
+background-position:center;
+height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+padding:20px;
+}
+
+.hero h1{
+font-size:60px;
+color:#0F4C81;
+margin-bottom:20px;
+}
+
+.hero p{
+font-size:22px;
+margin-bottom:30px;
+}
+
+.btn{
+display:inline-block;
+padding:15px 35px;
+background:#0F4C81;
+color:white;
+text-decoration:none;
+border-radius:50px;
+}
+
+section{
+padding:80px 8%;
+}
+
+.title{
+text-align:center;
+margin-bottom:50px;
+color:#0F4C81;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:25px;
+}
+
+.card{
+background:white;
+border-radius:20px;
+padding:25px;
+box-shadow:0 10px 30px rgba(0,0,0,.08);
+}
+
+.card h3{
+color:#0F4C81;
+margin-bottom:10px;
+}
+
+.price{
+font-size:24px;
+font-weight:700;
+color:#f5b800;
+margin:10px 0;
+}
+
+.include{
+background:#f8f9fb;
+}
+
+.include ul{
+max-width:800px;
+margin:auto;
+}
+
+.include li{
+margin-bottom:10px;
+}
+
+.itinerary{
+background:#fff;
+}
+
+.day{
+background:#f8f9fb;
+padding:20px;
+border-radius:15px;
+margin-bottom:20px;
+}
+
+.testimonials{
+background:#f8f9fb;
+}
+
+.testimonial{
+background:white;
+padding:25px;
+border-radius:15px;
+box-shadow:0 5px 15px rgba(0,0,0,.08);
+}
+
+footer{
+background:#0F4C81;
+color:white;
+text-align:center;
+padding:30px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="hero">
+<h1>Luxury Tour Indonesia</h1>
+<p>
+Paket Wisata Medan & Jakarta ke Bali, Yogyakarta,
+Kuala Lumpur dan Bangkok
+</p>
+
+<a href="#paket" class="btn">Lihat Paket Tour</a>
+</div>
+</header>
+
+<section id="paket">
+
+<h2 class="title">Paket Tour Populer</h2>
+
+<div class="grid">
+
+<div class="card">
+<h3>Medan → Bali</h3>
+<p>4 Hari 3 Malam</p>
+<div class="price">Rp 3.499.000</div>
+<p>Tiket PP • Hotel • Makan • Guide</p>
+</div>
+
+<div class="card">
+<h3>Medan → Yogyakarta</h3>
+<p>3 Hari 2 Malam</p>
+<div class="price">Rp 2.999.000</div>
+<p>Tiket PP • Hotel • Makan • Guide</p>
+</div>
+
+<div class="card">
+<h3>Medan → Kuala Lumpur</h3>
+<p>3 Hari 2 Malam</p>
+<div class="price">Rp 4.999.000</div>
+<p>Tiket PP • Hotel • Guide</p>
+</div>
+
+<div class="card">
+<h3>Medan → Bangkok</h3>
+<p>4 Hari 3 Malam</p>
+<div class="price">Rp 6.499.000</div>
+<p>Tiket PP • Hotel • Guide</p>
+</div>
+
+<div class="card">
+<h3>Jakarta → Bali</h3>
+<p>4 Hari 3 Malam</p>
+<div class="price">Rp 2.999.000</div>
+</div>
+
+<div class="card">
+<h3>Jakarta → Yogyakarta</h3>
+<p>3 Hari 2 Malam</p>
+<div class="price">Rp 2.499.000</div>
+</div>
+
+<div class="card">
+<h3>Jakarta → Kuala Lumpur</h3>
+<p>3 Hari 2 Malam</p>
+<div class="price">Rp 4.499.000</div>
+</div>
+
+<div class="card">
+<h3>Jakarta → Bangkok</h3>
+<p>4 Hari 3 Malam</p>
+<div class="price">Rp 5.999.000</div>
+</div>
+
+</div>
+
+</section>
+
+<section class="include">
+
+<h2 class="title">Include Tour</h2>
+
+<ul>
+<li>✓ Tiket Pesawat Pulang Pergi</li>
+<li>✓ Hotel Bintang 3–5</li>
+<li>✓ Sarapan Hotel</li>
+<li>✓ Makan Siang dan Malam</li>
+<li>✓ Tour Guide Profesional</li>
+<li>✓ Transportasi Pariwisata</li>
+<li>✓ Tiket Masuk Tempat Wisata</li>
+<li>✓ Air Mineral Selama Tour</li>
+</ul>
+
+</section>
+
+<section class="itinerary">
+
+<h2 class="title">Contoh Itinerary Bali 4H3M</h2>
+
+<div class="day">
+<h3>Hari 1</h3>
+<p>
+Keberangkatan – Check In Hotel – Pantai Kuta –
+Sunset Dinner
+</p>
+</div>
+
+<div class="day">
+<h3>Hari 2</h3>
+<p>
+GWK Cultural Park – Pantai Melasti –
+Uluwatu Temple – Tari Kecak
+</p>
+</div>
+
+<div class="day">
+<h3>Hari 3</h3>
+<p>
+Bedugul – Danau Beratan –
+Tanah Lot – Oleh Oleh Bali
+</p>
+</div>
+
+<div class="day">
+<h3>Hari 4</h3>
+<p>
+Check Out – Transfer Bandara –
+Penerbangan Kembali
+</p>
+</div>
+
+</section>
+
+<section class="testimonials">
+
+<h2 class="title">Testimoni Pelanggan</h2>
+
+<div class="grid">
+
+<div class="testimonial">
+★★★★★
+<p>
+Tour Medan Bali sangat memuaskan.
+Hotel bagus dan guide sangat ramah.
+</p>
+<strong>Andi Wijaya</strong>
+</div>
+
+<div class="testimonial">
+★★★★★
+<p>
+Perjalanan Bangkok berjalan lancar
+dan sesuai itinerary.
+</p>
+<strong>Rina Sari</strong>
+</div>
+
+<div class="testimonial">
+★★★★★
+<p>
+Harga terbaik dan pelayanan cepat.
+Sangat direkomendasikan.
+</p>
+<strong>Budi Santoso</strong>
+</div>
+
+</div>
+
+</section>
+
+<footer>
+© 2026 Luxury Tour Indonesia | WhatsApp: 0812-3456-7890
+</footer>
+
+</body>
+</html>
+```
