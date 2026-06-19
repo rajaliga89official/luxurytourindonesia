@@ -1,1 +1,0 @@
-const a=['★★★★★ Pelayanan sangat memuaskan.','★★★★★ Tour sangat nyaman.','★★★★★ Recommended untuk keluarga.'];let i=0;setInterval(()=>{i=(i+1)%a.length;document.getElementById('t').innerText=a[i]},3000);
